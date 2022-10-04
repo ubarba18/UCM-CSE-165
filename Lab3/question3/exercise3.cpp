@@ -13,8 +13,7 @@ class Array{
     void print() {
         //Index through this array using a pointer 
         for (int i = 0; i < 5; i++) {
-            cout << *ptr << endl;
-            ptr++;
+            cout << *(ptr + i) << endl;
         }
     }
 };
