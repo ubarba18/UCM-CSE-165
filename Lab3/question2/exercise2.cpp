@@ -15,8 +15,6 @@ class Text {
 };
 
 Text::Text(string filename) {
-   // cout << "Constructor with filename" << endl;
-
     //print filename
     cout << "Filename: " << filename << endl;
 

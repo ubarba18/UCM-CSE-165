@@ -11,7 +11,7 @@ class Array{
         ptr = arr;
     }
     void print() {
-        //Index through this array using a pointer to member.
+        //Index through this array using a pointer 
         for (int i = 0; i < 5; i++) {
             cout << *ptr << endl;
             ptr++;
