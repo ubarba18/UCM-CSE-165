@@ -1,6 +1,3 @@
-//[Exercise 19 on Page 390] Create a class (say myClass) containing both a const (say float f1) and a non-const (say 
-//const float f2) float. Initialize f1 and f2 using the constructor initializer list
-
 #include<iostream>
 
 using namespace std;
