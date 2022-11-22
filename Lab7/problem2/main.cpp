@@ -1,15 +1,32 @@
-/**
- Create a simple class (e.g., mySimpleClass) containing an int (e.g., int x) and overload 
-the addition operator (+) and the multiplication operator (*) as two member functions. Also provide a print( ) 
-member function that takes an ostream& (e.g., cout) as an argument (e.g., void print(ostream& out)) and print x to 
-that ostream& (e.g., out << x).
-*/
-
 #include <iostream>
 #include <cstring>
 using namespace std;
 
-class mySimpleClass
- {
-    
+class mySimpleClass {
+    public:
+    mySimpleClass(): i(0) {}
+    mySimpleClass(int i): i(i) {}
+
+    mySimpleClass operator+(const mySimpleClass& rhs) {
+        return mySimpleClass(i + rhs.i);
+    }
+
+    mySimpleClass operator*(const mySimpleClass& rhs) {
+        return mySimpleClass(i * rhs.i);
+    }
+
+    void print(ostream& out) {
+        out << i << endl;
+    }
+
+    private:
+        int i;
 };
+
+int main() {
+    mySimpleClass a(5);
+    mySimpleClass b(10);
+    mySimpleClass c = a * a + b * b;
+    c.print(cout);
+    return 0;
+}
